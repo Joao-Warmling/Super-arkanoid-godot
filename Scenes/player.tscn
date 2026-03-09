@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cp8dtwfdki8yx"]
+
+[ext_resource type="Script" uid="uid://c0mstih3sfcjr" path="res://Scripts/player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://deaq3d5no62f2" path="res://Sprites/Player.png" id="1_v0iea"]
+[ext_resource type="AudioStream" uid="uid://u1pk634vyuje" path="res://Sounds/shoot.wav" id="3_6t5aa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+size = Vector2(100, 24)
+
+[node name="Player" type="CharacterBody2D" unique_id=273758204]
+position = Vector2(320, 395)
+collision_mask = 34
+script = ExtResource("1_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=592844332]
+texture = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1487142413]
+shape = SubResource("RectangleShape2D_cvnsp")
+
+[node name="SpawnShootTimer" type="Timer" parent="." unique_id=485580789]
+wait_time = 0.5
+
+[node name="AudioShoot" type="AudioStreamPlayer2D" parent="." unique_id=1957179622]
+stream = ExtResource("3_6t5aa")
+volume_db = -15.0
+
+[connection signal="timeout" from="SpawnShootTimer" to="." method="_on_spawn_shoot_timer_out"]

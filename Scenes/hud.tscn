@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://ba2eg5oa7ybu2"]
+
+[ext_resource type="FontFile" uid="uid://cdlvuo45ixa5j" path="res://Fonts/Flatwheat-Regular.ttf" id="1_e0onf"]
+[ext_resource type="Script" uid="uid://8e7vqrk3hkib" path="res://Scripts/hud.gd" id="1_fccik"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fccik"]
+font = ExtResource("1_e0onf")
+font_size = 20
+shadow_size = 4
+shadow_color = Color(0, 0, 0, 0.58431375)
+
+[node name="HUD" type="Control" unique_id=1715022663]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_fccik")
+
+[node name="LabelPoints" type="Label" parent="." unique_id=1126954475]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 137.0
+offset_bottom = 33.0
+text = "PONTOS: "
+label_settings = SubResource("LabelSettings_fccik")
+uppercase = true
+
+[node name="LabelRecord" type="Label" parent="." unique_id=708068643]
+layout_mode = 0
+offset_left = 511.0
+offset_top = 6.0
+offset_right = 640.0
+offset_bottom = 34.0
+text = "RECORDE: "
+label_settings = SubResource("LabelSettings_fccik")
+uppercase = true
+
+[node name="LabelLives" type="Label" parent="." unique_id=1049436523]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 452.0
+offset_right = 669.0
+offset_bottom = 480.0
+text = "VIDAS: "
+label_settings = SubResource("LabelSettings_fccik")
+uppercase = true

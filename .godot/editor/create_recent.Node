@@ -1,0 +1,11 @@
+AudioStreamPlayer2D
+Sprite2D
+Node2D
+CanvasLayer
+Label
+Control
+Timer
+CollisionShape2D
+Area2D
+CharacterBody2D
+StaticBody2D
